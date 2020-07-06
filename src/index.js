@@ -13,7 +13,8 @@ ReactDOM.render(
 );
 */
 
-const element = <h1>Hello, world!</h1>
+const name = "HyunKi";
+const element = <h1>Hello, {name}!</h1>
 
 ReactDOM.render(
   element,
