@@ -13,11 +13,15 @@ ReactDOM.render(
 );
 */
 
+const formatName = function (name) {
+  return name.firstName + " " + name.lastName;
+}
+
 const name = {
   firstName: "HyunKi",
   lastName: "Kim",
 }
-const element = <h1>Hello, {name.firstName + " " + name.lastName}!</h1>
+const element = <h1>Hello, {formatName(name)}!</h1>
 
 ReactDOM.render(
   element,
