@@ -13,8 +13,11 @@ ReactDOM.render(
 );
 */
 
-const name = "HyunKi";
-const element = <h1>Hello, {name}!</h1>
+const name = {
+  firstName: "HyunKi",
+  lastName: "Kim",
+}
+const element = <h1>Hello, {name.firstName + " " + name.lastName}!</h1>
 
 ReactDOM.render(
   element,
