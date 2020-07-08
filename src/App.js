@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Comment from './Comment';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ padding: 16, backgroundColor: '#282c34'}}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <Comment />
+      </div>
     </div>
   );
 }
