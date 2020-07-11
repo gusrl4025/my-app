@@ -43,7 +43,7 @@ class LoginControl extends React.Component {
             button = <LoginButton onClick={this.handleLoginClick} />;
         }
         
-        let notiCount = 0;
+        let notiCount = 10;
 
         return (
             <div>
@@ -53,8 +53,9 @@ class LoginControl extends React.Component {
                 {isLoggedIn &&
                     <div>
                         <h5>{new Date().toLocaleString()}</h5>
-                        {notiCount > 0 &&   // notiCount == 0 이므로 렌더링되지 않음
-                            <h5>{'New noti: ' + notiCount}</h5>}
+                        {notiCount > 0 ?   // notiCount == 10 이면 New noti : 10, 0이면 No notification 렌더링
+                            <h5>{'New noti: ' + notiCount}</h5> // null 이면 아무것도 나오지 않음
+                            : <h5>{'No notification'}</h5>}
                     </div>}
             </div>
         );
