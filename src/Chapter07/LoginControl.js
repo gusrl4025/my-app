@@ -42,11 +42,20 @@ class LoginControl extends React.Component {
         } else {
             button = <LoginButton onClick={this.handleLoginClick} />;
         }
+        
+        let notiCount = 0;
 
         return (
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
                 {button}
+
+                {isLoggedIn &&
+                    <div>
+                        <h5>{new Date().toLocaleString()}</h5>
+                        {notiCount > 0 &&   // notiCount == 0 이므로 렌더링되지 않음
+                            <h5>{'New noti: ' + notiCount}</h5>}
+                    </div>}
             </div>
         );
     }
