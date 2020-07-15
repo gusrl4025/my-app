@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import LoginControl from './Chapter07/LoginControl';
+import AttendanceBook from './Chapter08/AttendanceBook';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<LoginControl />, document.getElementById('root'));
+ReactDOM.render(<AttendanceBook />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
